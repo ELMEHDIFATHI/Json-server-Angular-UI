@@ -1,0 +1,69 @@
+<h1 mat-dialog-title>{{Title}}</h1>
+<div mat-dialog-content>
+  <form [formGroup]="projectForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Name Project</mat-label>
+      <input formControlName="Name" matInput placeholder="Name">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <input  formControlName="Description" matInput placeholder="Description">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>dure</mat-label>
+      <input formControlName="Dure" matInput placeholder="Dure">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="Status" placeholder="Status">
+        <mat-option value="Encours">En cours</mat-option>
+        <mat-option value="Termine">Termine</mat-option>
+        <mat-option value="pas commencer">pas commencer</mat-option>
+
+      </mat-select>
+  
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>client</mat-label>
+      <mat-select formControlName="client"  placeholder="client">
+        <mat-option value="client1">client1</mat-option>
+        <mat-option value="client2">client2</mat-option>
+        <mat-option value="client3">client3</mat-option>
+
+      </mat-select>
+  
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Name of administaeur</mat-label>
+      <input formControlName="admin"  matInput placeholder="admin">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>List of Employe</mat-label>
+      <mat-select  formControlName="Employe" placeholder="List of Employe">
+        <mat-option value="E1">E1</mat-option>
+        <mat-option value="E2">E2</mat-option>
+        <mat-option value="E3">E3</mat-option>
+
+      </mat-select>
+  
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>List of Chef Project</mat-label>
+      <mat-select formControlName="chef"   placeholder="List of chef Porject">
+        <mat-option value="chef1">chef1</mat-option>
+        <mat-option value="chef2">chef2</mat-option>
+        <mat-option value="chef3">chef3</mat-option>
+
+      </mat-select>
+  
+    </mat-form-field>
+    
+  </form>
+</div>
+
+   
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>close</button>
+  <button mat-raised-button color="primary" style="margin-left:8px;" (click)="addProject()">{{btnAction}}</button>
+</div>
